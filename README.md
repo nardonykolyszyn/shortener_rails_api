@@ -3,6 +3,8 @@
 
 **This API implements a HTTP client that connects Bit.ly API**
 
+API url: https://api-shorten-test.herokuapp.com
+
 This API allows you to:
 
 - Shorten URLs
