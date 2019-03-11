@@ -3,7 +3,7 @@ require 'clients/bitly_client'
 
 module Api
   module V1
-    class ShortenerController < ApplicationController
+    class LinksController < ApplicationController
       def shorten
         response = params[:url].present? ? bitly_client.shorten_url(params[:url]) : missing_url_error
         render_data_json(data: response)
