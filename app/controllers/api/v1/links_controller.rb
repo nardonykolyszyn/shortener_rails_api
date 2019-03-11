@@ -27,7 +27,7 @@ module Api
       end
       
       def missing_url_error
-        { error: 'missing url param' }
+        { error: 'missing url param', code: :unprocessable_entity }
       end
 
       def bitly_client
