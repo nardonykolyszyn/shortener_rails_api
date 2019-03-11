@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: <%= ENV.fetch('POSTGRES_USER') { 'postgres' } %>
+  password: <%= ENV.fetch('POSTGRES_PASSWORD') { '' } %>
+
+development:
+  <<: *default
+  database: bitly_api_dev
+test:
+  <<: *default
+  database: bitly_api_test
+
+production:
+  <<: *default
+  database: bitly_api_production
