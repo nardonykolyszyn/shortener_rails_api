@@ -1,7 +1,7 @@
 
 # Shortener API
 
-**This API implements a HTTP client that connects Bit.ly API**
+**This API implements an HTTP client that connects Bit.ly API**
 
 This API allows you to:
 
