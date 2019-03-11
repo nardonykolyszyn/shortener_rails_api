@@ -6,7 +6,10 @@ module Api
     class LinksController < ApplicationController
       def shorten
         response = params[:url].present? ? bitly_client.shorten_url(params[:url]) : missing_url_error
-        render_data_json(data: response)
+        if response.success?
+          LinkJob.perform_later(response.body)
+        end
+        render_data_json(data: response.body)
       end
 
       def lookup
