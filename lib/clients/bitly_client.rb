@@ -8,7 +8,7 @@ class BitlyClient < BaseClient
 	end
 
 	def access_token
-		@access_token || ENV.fetch('BITLY_ACCESS_TOKEN')
+		@access_token || ENV.fetch('ACCESS_TOKEN')
 	end
 
 	def shorten_url(long_url)
