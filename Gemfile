@@ -60,3 +60,4 @@ gem "faraday"
 gem "faraday_middleware"
 
 gem "request_id", "~> 0.4.3"
+gem 'sidekiq'
